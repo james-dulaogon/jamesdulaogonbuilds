@@ -1,0 +1,87 @@
+.project-link-card {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: border var(--transition-speed), transform var(--transition-speed);
+}
+
+.link-chassis {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  z-index: 2;
+}
+
+.link-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.link-diagnostic-code {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  transition: color var(--transition-speed);
+}
+
+.link-main-text {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.link-vector-arrow {
+  color: var(--text-muted);
+  transform: translateX(0);
+  transition: transform var(--transition-speed), color var(--transition-speed);
+}
+
+/* Hidden Laser Light-Strip Anchor */
+.link-laser-trim {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--rosso-corsa);
+  opacity: 0;
+  transform: scaleX(0.8);
+  transition: opacity var(--transition-speed), transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+/* ================= HOVER TRIGGER STATE ================= */
+.project-link-card:hover {
+  border-color: var(--border-active);
+  transform: translateY(-2px);
+}
+
+.project-link-card:hover .link-diagnostic-code {
+  color: var(--rosso-corsa);
+}
+
+.project-link-card:hover .link-vector-arrow {
+  color: var(--text-primary);
+  transform: translateX(4px);
+}
+
+/* Ignite the Laser-Trim Base Glow */
+.project-link-card:hover .link-laser-trim {
+  opacity: 1;
+  transform: scaleX(1);
+  box-shadow: 0 0 14px 2px var(--rosso-corsa), 0 0 4px var(--rosso-corsa);
+}
+
+/* Optional variation styling rules if you want different shades for live vs source code links */
+.link-type-live:hover {
+  background: linear-gradient(180deg, var(--bg-secondary) 0%, rgba(239, 68, 68, 0.02) 100%);
+}

@@ -1,0 +1,31 @@
+.telemetry-badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-secondary);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: border var(--transition-speed);
+}
+
+.telemetry-badge:hover {
+  border-color: var(--border-active);
+  box-shadow: 0 0 12px var(--rosso-glow);
+}
+
+.telemetry-label {
+  padding: 4px 8px;
+  color: var(--text-muted);
+  background: var(--bg-tertiary);
+  border-right: 1px solid var(--border-subtle);
+}
+
+.telemetry-value {
+  padding: 4px 8px;
+  color: var(--rosso-corsa);
+  font-weight: 600;
+}

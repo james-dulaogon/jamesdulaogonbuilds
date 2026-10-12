@@ -1,0 +1,91 @@
+.spec-row {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 2fr;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-subtle);
+  transition: background-color var(--transition-speed);
+}
+
+.spec-row:hover {
+  background-color: rgba(255, 255, 255, 0.01);
+}
+
+.spec-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Small square accent mimicking a laser-etched dot */
+.spec-indicator {
+  width: 4px;
+  height: 4px;
+  background-color: var(--rosso-corsa);
+  box-shadow: 0 0 6px var(--rosso-corsa);
+  border-radius: 50%;
+}
+
+.spec-name {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.spec-badge-wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Minimalist telemetry bar system */
+.spec-gauge-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.spec-gauge-fill {
+  height: 2px;
+  background-color: var(--rosso-corsa);
+  box-shadow: 0 0 8px var(--rosso-glow);
+  transition: width 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Subtle grid backdrop for the metric bar */
+.spec-gauge-container::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--bg-tertiary);
+  z-index: -1;
+}
+
+.spec-percentage {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  margin-left: auto;
+}
+
+/* Responsive adjustment for clean mobile scaling */
+@media (max-width: 640px) {
+  .spec-row {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 1.25rem 0;
+  }
+  
+  .spec-badge-wrapper {
+    margin-left: 12px;
+  }
+  
+  .spec-gauge-container {
+    margin-left: 12px;
+    width: calc(100% - 12px);
+  }
+}
