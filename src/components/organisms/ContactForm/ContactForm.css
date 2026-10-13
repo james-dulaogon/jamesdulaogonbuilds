@@ -1,0 +1,173 @@
+/* src/components/organisms/ContactForm/ContactForm.css */
+.contact-form-organism {
+  padding: 6rem 0;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.contact-meta-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.contact-serial-code {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--rosso-corsa);
+  letter-spacing: 0.15em;
+}
+
+.contact-laser-line {
+  flex-grow: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(239, 68, 68, 0.3) 0%, rgba(255, 255, 255, 0.01) 100%);
+}
+
+.contact-layout-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+}
+
+/* Informational Panel */
+.contact-main-title {
+  font-family: var(--font-sans);
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.contact-description {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.contact-diagnostic-readout {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  background: var(--bg-secondary);
+  border: 1px dashed var(--border-subtle);
+  padding: 1rem;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 300px;
+}
+
+.diag-key { color: var(--text-muted); }
+.diag-val { color: var(--text-secondary); }
+
+/* Right Aspect Terminal HUD Cards */
+.contact-terminal-hud {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.hud-identity-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  padding: 1.5rem;
+  border-radius: 6px;
+}
+
+.hud-card-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+}
+
+.hud-card-name {
+  font-family: var(--font-sans);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+/* Interactive Direct Click Target */
+.hud-email-anchor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  gap: 1rem;
+  transition: transform var(--transition-speed);
+}
+
+.email-text-value {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  transition: color var(--transition-speed);
+}
+
+/* Custom Mechanical Action Indicator Block */
+.hud-action-trigger-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-tertiary);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  transition: border-color var(--transition-speed), color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.btn-vector-arrow {
+  font-size: 0.55rem;
+  transform: rotate(90deg);
+  transition: transform var(--transition-speed);
+}
+
+/* HOVER TRIGGERS */
+.hud-email-anchor:hover .email-text-value {
+  color: var(--rosso-corsa);
+}
+
+.hud-email-anchor:hover .hud-action-trigger-btn {
+  border-color: var(--border-active);
+  color: var(--text-primary);
+  box-shadow: 0 0 10px var(--rosso-glow);
+}
+
+.hud-email-anchor:hover .btn-vector-arrow {
+  transform: rotate(90deg) translateY(-2px);
+  color: var(--rosso-corsa);
+}
+
+/* Responsive adjustment rules */
+@media (max-width: 768px) {
+  .contact-layout-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  
+  .hud-email-anchor {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+  
+  .hud-action-trigger-btn {
+    width: 100%;
+    justify-content: space-between;
+  }
+}

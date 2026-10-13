@@ -1,0 +1,52 @@
+name: Deploy Portfolio Engine to GitHub Pages
+
+on:
+  # Trigger the compilation engine every time code hits the main branch ledger
+  push:
+    branches: ["main"]
+
+  # Allows you to manually trigger this pipeline workflow from the Actions dashboard tab
+  workflow_dispatch:
+
+# Set up core environment permissions to safely allow build output delivery
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Ensure only one automated deployment process runs at a time to prevent overlapping builds
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build_and_deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-size: ubuntu-latest
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source Code Repository
+        uses: actions/checkout@v4
+
+      - name: Initialize NodeJS Runtime Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Sync Dependencies Spec
+        run: npm ci
+
+      - name: Compile High-Performance Assets Build
+        run: npm run build
+
+      - name: Structural Assets Configuration
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './dist'
+
+      - name: Ship Compiled Build to GitHub Pages Network
+        id: deployment
+        uses: actions/deploy-pages@v4

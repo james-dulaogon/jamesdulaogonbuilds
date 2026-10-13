@@ -1,0 +1,146 @@
+.hero-section-organism {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 0 6rem 0;
+  border-bottom: 1px solid var(--border-subtle);
+  overflow: hidden;
+}
+
+/* Telemetry Header Line */
+.hero-telemetry-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.hero-serial-readout {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--rosso-corsa);
+  letter-spacing: 0.15em;
+  white-space: nowrap;
+}
+
+.system-pulse-line {
+  flex-grow: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(239, 68, 68, 0.4) 0%, rgba(255, 255, 255, 0.02) 100%);
+}
+
+/* Typography Hierarchy */
+.hero-main-title {
+  font-family: var(--font-sans);
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.hero-gradient-text {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.9);
+}
+
+.hero-subtitle {
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 640px;
+  margin-bottom: 3.5rem;
+}
+
+.hero-name-highlight {
+  color: var(--text-primary);
+  font-weight: 600;
+  border-bottom: 1px dashed var(--rosso-corsa);
+}
+
+/* Diagnostic Readout Matrix Grid */
+.hero-diagnostic-matrix {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 640px;
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid var(--border-subtle);
+  padding: 1.5rem;
+  border-radius: 6px;
+  z-index: 2;
+}
+
+.matrix-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.matrix-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+}
+
+.matrix-badge-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.matrix-data-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  border-bottom: 1px dashed var(--border-subtle);
+  padding-bottom: 0.25rem;
+}
+
+.matrix-data-key {
+  color: var(--text-secondary);
+}
+
+.matrix-data-value {
+  color: var(--rosso-corsa);
+  font-weight: 600;
+}
+
+.matrix-data-value.value-green {
+  color: #10b981; /* Premium performance emerald indicator */
+  text-shadow: 0 0 8px rgba(16, 185, 129, 0.2);
+}
+
+/* Subtle Automotive Grid Sheet Background Overlay */
+.hero-blueprint-grid {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.01) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
+  mask-image: radial-gradient(circle at 70% 30%, black 20%, transparent 70%);
+  -webkit-mask-image: radial-gradient(circle at 70% 30%, black 20%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Responsive Scaling For Smaller Displays */
+@media (max-width: 768px) {
+  .hero-main-title {
+    font-size: 2.25rem;
+  }
+  
+  .hero-diagnostic-matrix {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}

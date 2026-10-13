@@ -1,16 +1,15 @@
+// vite.config.js
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import { fileURLToPath } from 'node:url';
-
-const srcDirectory = fileURLToPath(new URL('./src', import.meta.url));
+import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@': srcDirectory,
+      '@': path.resolve(__dirname, './src'),
     },
   },
-  // Necessary for direct deploying to GitHub Pages sub-routes later
-  base: process.env.NODE_ENV === 'production' ? '/YOUR_GITHUB_REPOSITORY_NAME/' : '/',
+  // Automatically handles sub-paths on GitHub Pages, while maintaining normal local serving maps
+  base: process.env.NODE_ENV === 'production' ? '/jamesdulaogonbuilds/' : '/',
 });

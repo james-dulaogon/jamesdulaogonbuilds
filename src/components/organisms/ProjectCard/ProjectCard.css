@@ -13,7 +13,7 @@
   transform: translateY(-2px);
 }
 
-/* Internal panel divider mimicking dashboard telemetry segments */
+
 .card-header-panel {
   display: flex;
   justify-content: space-between;
@@ -87,7 +87,6 @@
   text-transform: uppercase;
 }
 
-/* Splitting action buttons layout cleanly */
 .card-action-footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -97,7 +96,6 @@
   background: rgba(0, 0, 0, 0.1);
 }
 
-/* Adjust layout responsively for narrow viewports */
 @media (max-width: 640px) {
   .card-action-footer {
     grid-template-columns: 1fr;
