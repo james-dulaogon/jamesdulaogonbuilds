@@ -1,0 +1,130 @@
+/* src/components/molecules/ResumeTrigger/ResumeTrigger.css */
+.resume-viewport-pod {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 1.25rem;
+  width: 100%;
+  max-width: 640px;
+  margin: 2rem 0;
+  position: relative;
+  transition: border-color var(--transition-speed);
+}
+
+.resume-viewport-pod:hover {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.resume-hud-meta {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+  border-bottom: 1px dashed var(--border-subtle);
+  padding-bottom: 0.5rem;
+}
+
+.rh-status {
+  color: #10b981;
+  font-weight: bold;
+}
+
+.resume-action-matrix {
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.resume-hud-anchor {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+/* Preview Sector Link Layout */
+.link-preview {
+  gap: 1rem;
+}
+
+.ra-icon {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  background: var(--bg-tertiary);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  transition: color var(--transition-speed), border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.ra-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.ra-title {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  transition: color var(--transition-speed);
+}
+
+.ra-sub {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+}
+
+/* Download Side Module Selector Button */
+.download-hud-btn {
+  width: 100%;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-tertiary);
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  transition: background-color var(--transition-speed), border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+/* ================= HOVER INTERACTION TRIGGER STYLES ================= */
+.link-preview:hover .ra-icon {
+  color: var(--rosso-corsa);
+  border-color: var(--border-active);
+  box-shadow: 0 0 10px var(--rosso-glow);
+}
+
+.link-preview:hover .ra-title {
+  color: var(--rosso-corsa);
+}
+
+.link-download:hover .download-hud-btn {
+  background-color: var(--rosso-corsa);
+  border-color: var(--rosso-corsa);
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.3);
+}
+
+@media (max-width: 580px) {
+  .resume-action-matrix {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .link-download .download-hud-btn {
+    width: 100%;
+    padding: 0.85rem;
+  }
+}

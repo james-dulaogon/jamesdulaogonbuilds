@@ -40,7 +40,7 @@ export const Footer = () => {
             LINKEDIN
           </a>
           <a
-            href="https://drive.google.com/file/d/1oN7DCdTHJ6KqfebPzAuIehLVnyRU76rU/view?usp=sharing"
+            href="/src/public/assets/RESUME.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="footer-link-item link-accent"

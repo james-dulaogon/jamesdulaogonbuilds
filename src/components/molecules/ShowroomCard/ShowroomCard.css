@@ -1,0 +1,100 @@
+/* src/components/molecules/ShowroomCard/ShowroomCard.css */
+.showroom-card-case {
+  background: rgba(18, 18, 18, 0.6);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 2rem;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: border-color var(--transition-speed), transform var(--transition-speed);
+}
+
+.showroom-card-case:hover {
+  border-color: rgba(255, 255, 255, 0.08);
+  transform: translateY(-4px);
+}
+
+.case-header {
+  margin-bottom: 2rem;
+  border-bottom: 1px dashed var(--border-subtle);
+  padding-bottom: 1rem;
+}
+
+.case-category-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+}
+
+.case-title {
+  font-family: var(--font-sans);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-top: 0.25rem;
+}
+
+/* Icons Matrix Layout */
+.case-icon-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* Individual Mechanical Logo Pods */
+.tech-logo-pod {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.pod-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  color: var(--text-secondary);
+  font-size: 1.75rem;
+  transition: color var(--transition-speed), border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+/* Ensure any injected SVG scales beautifully inside the pod framework */
+.pod-icon-wrapper svg {
+  width: 28px;
+  height: 28px;
+  fill: currentColor;
+}
+
+.pod-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  transition: color var(--transition-speed);
+}
+
+/* ================= HOVER TRIGGER STATES ================= */
+.tech-logo-pod:hover .pod-icon-wrapper {
+  color: var(--rosso-corsa);
+  border-color: var(--border-active);
+  box-shadow: 0 0 12px var(--rosso-glow);
+}
+
+.tech-logo-pod:hover .pod-label {
+  color: var(--text-primary);
+}
+
+@media (max-width: 480px) {
+  .case-icon-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

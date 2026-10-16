@@ -1,5 +1,5 @@
 {
-  "name": "supercar-atomic-portfolio",
+  "name": "jamesdulaogonbuilds",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-icons": "^5.7.0"
   },
   "devDependencies": {
     "@types/react": "^19.0.0",

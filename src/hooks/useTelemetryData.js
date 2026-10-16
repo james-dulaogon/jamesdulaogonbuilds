@@ -16,7 +16,7 @@ export const useTelemetryData = (isActive = true) => {
     const dataStream = setInterval(() => {
       setTelemetry((prev) => {
         // Accelerate or fluctuate naturally
-        const targetSpeed = 184;
+        const targetSpeed = 200;
         const speedDelta = (targetSpeed - prev.speed) * 0.05;
         const newSpeed = Math.min(prev.speed + speedDelta + (Math.random() * 2 - 1), targetSpeed);
         

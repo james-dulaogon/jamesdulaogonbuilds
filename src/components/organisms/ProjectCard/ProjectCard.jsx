@@ -32,7 +32,7 @@ export const ProjectCard = ({
       </div>
 
       <div className="card-action-footer">
-        <ProjectCardLink type="live" href={liveUrl} title="LAUNCH APEX APP" />
+        <ProjectCardLink type="live" href={liveUrl} title="LAUNCH DEMO APP" />
         <ProjectCardLink type="source" href={repoUrl} title="AUDIT SOURCE CODE" />
       </div>
     </article>

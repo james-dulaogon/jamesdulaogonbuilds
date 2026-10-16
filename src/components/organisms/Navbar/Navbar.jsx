@@ -4,7 +4,6 @@ import "./Navbar.css";
 export const Navbar = () => {
   const [systemTime, setSystemTime] = useState("");
 
-  
   useEffect(() => {
     const updateClock = () => {
       const now = new Date();
@@ -24,12 +23,13 @@ export const Navbar = () => {
 
   return (
     <header className="dashboard-navbar">
-      <div className="navbar-container">        
+      <div className="navbar-container">
         <div className="navbar-logo-group">
           <span className="logo-indicator-triangle">▲</span>
           <span className="logo-text">
-            James Dulaogon | Front-End Web Developer{" "}
-            <span className="logo-version">//Builds</span>
+            James Dulaogon | Front-End Developer {" "}
+            <br />
+            <span className="logo-version">//Let Me Build Your Next App</span>
           </span>
         </div>
 

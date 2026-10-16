@@ -1,13 +1,50 @@
-// src/App.jsx
 import React from 'react';
 import { Navbar } from './components/organisms/Navbar/Navbar';
 import { HeroSection } from './components/organisms/HeroSection/HeroSection';
-import { SpecRow } from './components/molecules/SpecRow/SpecRow';
+import { ShowroomCard } from './components/molecules/ShowroomCard/ShowroomCard';
 import { ProjectCard } from './components/organisms/ProjectCard/ProjectCard';
 import { ContactForm } from './components/organisms/ContactForm/ContactForm';
-import { Footer } from './components/organisms/Footer/Footer'; // <--- Import Footer
+import { Footer } from './components/organisms/Footer/Footer';
+import { 
+  SiReact, 
+  SiTailwindcss, 
+  SiHtml5, 
+  SiCss, 
+  SiNodedotjs, 
+  SiExpress, 
+  SiJavascript, 
+  SiPostgresql,
+  SiGit,
+  SiGithub
+} from 'react-icons/si';
+import { VscVscode } from 'react-icons/vsc';
 
 export default function App() {
+  // Mock SVG wrappers matching your visual request parameters
+  const sampleSvg = (
+    <svg viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2zm0 3.99L19.53 19H4.47L12 5.99z"/></svg>
+  );
+
+  const frontendTech = [
+    { name: 'React', icon: <SiReact /> },
+    { name: 'Tailwind', icon: <SiTailwindcss /> },
+    { name: 'HTML5', icon: <SiHtml5 /> },
+    { name: 'CSS3', icon: <SiCss /> },
+  ];
+
+  const backendTech = [
+    { name: 'Node.js', icon: <SiNodedotjs /> },
+    { name: 'Express', icon: <SiExpress /> },
+    { name: 'JavaScript', icon: <SiJavascript /> },
+    { name: 'Postgres', icon: <SiPostgresql /> },
+  ];
+
+  const toolsTech = [
+    { name: 'Git', icon: <SiGit /> },
+    { name: 'GitHub', icon: <SiGithub /> },
+    { name: 'VS Code', icon: <VscVscode /> },
+  ];
+
   return (
     <div style={{ backgroundColor: 'var(--bg-primary)', minHeight: '100vh', display: 'flex', flexDirection: 'column', color: 'var(--text-primary)' }}>
       <Navbar />
@@ -15,39 +52,43 @@ export default function App() {
       <main style={{ maxWidth: '1200px', margin: '0 auto', padding: '6.5rem 2rem 2rem 2rem', width: '100%' }}>
         <HeroSection />
 
-        {/* SECTION 2: Technical Metrics */}
-        <section id="specs" style={{ padding: '6rem 0 4rem 0', borderBottom: '1px solid var(--border-subtle)' }}>
-          <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: 'var(--rosso-corsa)', marginBottom: '1.5rem' }}>
-            02 // CORE_DIAGNOSTICS
-          </p>
-          <div style={{ maxWidth: '700px' }}>
-            <SpecRow metricName="Framework System Optimization" systemValue="Vite / React" optimizationLevel={96} />
-            <SpecRow metricName="Type Safety Configuration" systemValue="TypeScript" optimizationLevel={89} />
+        {/* UPDATED SECTION 2: Tech Arsenal Showroom */}
+        <section id="specs" style={{ padding: '6rem 0' }}>
+          <div style={{ marginBottom: '2.5rem' }}>
+            <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: 'var(--rosso-corsa)', marginBottom: '0.5rem' }}>
+              02 // SHOWROOM_SPECS_SHEET
+            </p>
+            <h2 style={{ fontFamily: 'var(--font-sans)', fontSize: '2rem', fontWeight: '800' }}>
+              Performance Inventory
+            </h2>
+          </div>
+
+          {/* Grid Layout Container holding your 3 display boxes side-by-side */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
+            <ShowroomCard title="Frontend Body Styles" category="AERO_UI" skills={frontendTech} />
+            <ShowroomCard title="Backend Performance" category="DRIVETRAIN" skills={backendTech} />
+            <ShowroomCard title="Tools & Diagnostics" category="TUNING_ENV" skills={toolsTech} />
           </div>
         </section>
 
-        {/* SECTION 3: The Factory Garage */}
-        <section id="garage" style={{ padding: '6rem 0' }}>
+        {/* SECTION 3: The Garage Portfolio */}
+        <section id="garage" style={{ padding: '6rem 0', borderTop: '1px solid var(--border-subtle)' }}>
           <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: 'var(--rosso-corsa)', marginBottom: '2rem' }}>
             03 // THE_GARAGE_REPOSITORY
           </p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2rem' }}>
             <ProjectCard 
               chassisCode="STAGE_01 // CORE"
-              title="Apex Telemetry Dashboard"
-              description="A real-time high-throughput client dashboard using React Hooks and Context API to track custom browser performance telemetry and process memory maps smoothly."
-              techStack={["React 19", "Vite", "CSS Grid", "Context API"]}
-              liveUrl="https://google.com"
-              repoUrl="https://github.com"
+              title="Legislative Backtracking System"
+              description="A web application that tracks enacted legislation and traces the complete history of Local Legislation from its current state back to its original introduction."
+              techStack={["React 19", "TailwindCSS", "Node.js", "Express", "PostgreSQL"]}
+              liveUrl="#"
+              repoUrl="https://github.com/jig-jig/backtrackingsystem"
             />
           </div>
         </section>
-
-        {/* SECTION 4: Terminal Communications Uplink */}
         <ContactForm />
       </main>
-
-      {/* SECTION 5: Closing Dashboard Data Frame Footer */}
       <Footer />
     </div>
   );
