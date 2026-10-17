@@ -24,7 +24,6 @@ jobs:
     environment:
       name: james-dulaogon
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-size: ubuntu-latest
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Source Code Repository
