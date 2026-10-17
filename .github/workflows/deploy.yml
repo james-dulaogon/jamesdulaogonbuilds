@@ -1,4 +1,4 @@
-name: Deploy Portfolio Engine to GitHub Pages
+name: Deploying my portfolio website
 
 on:
   # Trigger the compilation engine every time code hits the main branch ledger
@@ -22,7 +22,7 @@ concurrency:
 jobs:
   build_and_deploy:
     environment:
-      name: github-pages
+      name: james-dulaogon
       url: ${{ steps.deployment.outputs.page_url }}
     runs-size: ubuntu-latest
     runs-on: ubuntu-latest
