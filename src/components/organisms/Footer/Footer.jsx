@@ -1,7 +1,7 @@
 // src/components/organisms/Footer/Footer.jsx
 import React from "react";
 import "./Footer.css";
-import portfolio from './public/assets/RESUME.pdf';
+import portfolio from '@/public/assets/RESUME.pdf';
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
