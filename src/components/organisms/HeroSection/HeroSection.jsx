@@ -3,6 +3,7 @@ import React from "react";
 import { TelemetryBadge } from "@/components/atoms/TelemetryBadge/TelemetryBadge";
 import { useTelemetryData } from "@/hooks/useTelemetryData";
 import "./HeroSection.css";
+import myProfile from '@public/assets/profile.jpg';
 
 export const HeroSection = () => {
   const metrics = useTelemetryData(true);
@@ -84,12 +85,9 @@ export const HeroSection = () => {
               <span className="meta-status-active">SYS_OK</span>
             </div>
 
-            {/* The Photo Container Deck */}
             <div className="driver-photo-frame">
-              {/* Pro Tip: Place your photo in the public folder and name it profile.jpg */}
               <img
-                src={${import.meta.env.BASE_URL}assets/your-photo.jpg} alt="James Dulaogon"
-                alt="James Dulaogon"
+                src={myProfile} alt="James Dulaogon"
                 className="driver-avatar-img"
                 onError={(e) => {
                   // Elegant visual placeholder if your image isn't loaded yet
@@ -100,7 +98,6 @@ export const HeroSection = () => {
               <div className="driver-photo-scanline" />
             </div>
 
-            {/* Specs Footer Ledger */}
             <div className="driver-spec-footer">
               <div className="driver-spec-item">
                 <span className="ds-label">CLASS:</span>

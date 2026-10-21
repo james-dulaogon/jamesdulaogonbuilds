@@ -9,6 +9,5 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
-  // Automatically handles sub-paths on GitHub Pages, while maintaining normal local serving maps
   base: command === 'build' ? '/jamesdulaogonbuilds/' : '/',
 });

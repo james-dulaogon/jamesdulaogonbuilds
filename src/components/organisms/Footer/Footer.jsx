@@ -1,6 +1,7 @@
 // src/components/organisms/Footer/Footer.jsx
 import React from "react";
 import "./Footer.css";
+import portfolio from '@public/assets/RESUME.pdf';
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -40,7 +41,7 @@ export const Footer = () => {
             LINKEDIN
           </a>
           <a
-            href="/src/public/assets/RESUME.pdf"
+            href={portfolio}
             target="_blank"
             rel="noopener noreferrer"
             className="footer-link-item link-accent"
