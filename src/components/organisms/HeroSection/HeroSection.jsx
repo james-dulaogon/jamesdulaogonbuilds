@@ -88,8 +88,8 @@ export const HeroSection = () => {
             <div className="driver-photo-frame">
               {/* Pro Tip: Place your photo in the public folder and name it profile.jpg */}
               <img
-                src="/src/public/assets/profile.jpg"
-                alt="Race Car Driver Profile"
+                src={${import.meta.env.BASE_URL}assets/your-photo.jpg} alt="James Dulaogon"
+                alt="James Dulaogon"
                 className="driver-avatar-img"
                 onError={(e) => {
                   // Elegant visual placeholder if your image isn't loaded yet
