@@ -1,4 +1,3 @@
-// vite.config.js
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
@@ -11,5 +10,5 @@ export default defineConfig({
     },
   },
   // Automatically handles sub-paths on GitHub Pages, while maintaining normal local serving maps
-  base: process.env.NODE_ENV === 'production' ? '/jamesdulaogonbuilds/' : '/',
+  base: command === 'build' ? '/jamesdulaogonbuilds/' : '/',
 });
