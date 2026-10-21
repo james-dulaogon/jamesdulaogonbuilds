@@ -3,7 +3,7 @@ import React from "react";
 import { TelemetryBadge } from "@/components/atoms/TelemetryBadge/TelemetryBadge";
 import { useTelemetryData } from "@/hooks/useTelemetryData";
 import "./HeroSection.css";
-import myProfile from '@/public/assets/images/profile.jpg';
+import myProfile from '/public/assets/profile.jpg';
 
 export const HeroSection = () => {
   const metrics = useTelemetryData(true);
