@@ -20,7 +20,6 @@ import {
 import { VscVscode } from 'react-icons/vsc';
 
 export default function App() {
-  // Mock SVG wrappers matching your visual request parameters
   const sampleSvg = (
     <svg viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2zm0 3.99L19.53 19H4.47L12 5.99z"/></svg>
   );
@@ -52,7 +51,6 @@ export default function App() {
       <main style={{ maxWidth: '1200px', margin: '0 auto', padding: '6.5rem 2rem 2rem 2rem', width: '100%' }}>
         <HeroSection />
 
-        {/* UPDATED SECTION 2: Tech Arsenal Showroom */}
         <section id="specs" style={{ padding: '6rem 0' }}>
           <div style={{ marginBottom: '2.5rem' }}>
             <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: 'var(--rosso-corsa)', marginBottom: '0.5rem' }}>
@@ -63,7 +61,6 @@ export default function App() {
             </h2>
           </div>
 
-          {/* Grid Layout Container holding your 3 display boxes side-by-side */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
             <ShowroomCard title="Frontend Body Styles" category="AERO_UI" skills={frontendTech} />
             <ShowroomCard title="Backend Performance" category="DRIVETRAIN" skills={backendTech} />
@@ -71,7 +68,6 @@ export default function App() {
           </div>
         </section>
 
-        {/* SECTION 3: The Garage Portfolio */}
         <section id="garage" style={{ padding: '6rem 0', borderTop: '1px solid var(--border-subtle)' }}>
           <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: 'var(--rosso-corsa)', marginBottom: '2rem' }}>
             03 // THE_GARAGE_REPOSITORY
