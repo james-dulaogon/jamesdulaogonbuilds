@@ -1,5 +1,3 @@
-// src/components/organisms/Footer/Footer.jsx
-import React from "react";
 import "./Footer.css";
 import portfolio from '../../../assets/RESUME.pdf';
 

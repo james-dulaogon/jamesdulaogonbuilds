@@ -1,4 +1,3 @@
-import React from 'react';
 import { TelemetryBadge } from '@/components/atoms/TelemetryBadge/TelemetryBadge';
 import './SpecRow.css';
 

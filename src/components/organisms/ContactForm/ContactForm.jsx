@@ -1,5 +1,3 @@
-// src/components/organisms/ContactForm/ContactForm.jsx
-import React from 'react';
 import './ContactForm.css';
 
 export const ContactForm = () => {

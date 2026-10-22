@@ -1,5 +1,4 @@
-import React from 'react';
-import { SiAdobeacrobatreader } from 'react-icons/si'; // Let's pull the official PDF asset icon
+import { SiAdobeacrobatreader } from 'react-icons/si';
 import './ResumeTrigger.css';
 
 export const ResumeTrigger = () => {
@@ -11,7 +10,7 @@ export const ResumeTrigger = () => {
       </div>
 
       <div className="resume-action-matrix">
-        {/* ACTION 1: High-Speed Native Viewport Tab */}
+        
         <a 
           href="/resume.pdf" 
           target="_blank" 
@@ -25,7 +24,6 @@ export const ResumeTrigger = () => {
           </div>
         </a>
 
-        {/* ACTION 2: Direct Override Physical File Download */}
         <a 
           href="/resume.pdf" 
           download="John_Doe_FrontEnd_Resume.pdf" 

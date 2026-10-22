@@ -1,4 +1,3 @@
-import React from 'react';
 import { Navbar } from './components/organisms/Navbar/Navbar';
 import { HeroSection } from './components/organisms/HeroSection/HeroSection';
 import { ShowroomCard } from './components/molecules/ShowroomCard/ShowroomCard';
@@ -20,9 +19,6 @@ import {
 import { VscVscode } from 'react-icons/vsc';
 
 export default function App() {
-  const sampleSvg = (
-    <svg viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2zm0 3.99L19.53 19H4.47L12 5.99z"/></svg>
-  );
 
   const frontendTech = [
     { name: 'React', icon: <SiReact /> },

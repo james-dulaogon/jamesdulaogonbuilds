@@ -1,4 +1,3 @@
-import React from 'react';
 import './ProjectCardLink.css';
 
 export const ProjectCardLink = ({ type, href, title = 'VIEW SOURCE' }) => {

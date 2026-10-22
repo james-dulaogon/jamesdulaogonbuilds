@@ -1,4 +1,3 @@
-import React from 'react';
 import './ShowroomCard.css';
 
 export const ShowroomCard = ({ title, category, skills = [] }) => {

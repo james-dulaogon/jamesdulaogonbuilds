@@ -1,5 +1,3 @@
-// src/components/organisms/HeroSection/HeroSection.jsx
-import React from "react";
 import { TelemetryBadge } from "@/components/atoms/TelemetryBadge/TelemetryBadge";
 import { useTelemetryData } from "@/hooks/useTelemetryData";
 import "./HeroSection.css";

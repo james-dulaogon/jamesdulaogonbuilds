@@ -1,4 +1,3 @@
-// scaffold.js
 import fs from 'fs';
 import path from 'path';
 
@@ -16,12 +15,10 @@ const dirs = [
   'src/components/pages/Dashboard'
 ];
 
-// Create Directories
 dirs.forEach(dir => {
   fs.mkdirSync(path.join(process.cwd(), dir), { recursive: true });
 });
 
-// Define core structural files to initialize
 const files = {
   'src/styles/variables.css': `:root {
   --bg-primary: #0a0a0a;
@@ -68,7 +65,6 @@ export default function App() {
 }`
 };
 
-// Write files
 Object.entries(files).forEach(([filepath, content]) => {
   fs.writeFileSync(path.join(process.cwd(), filepath), content.trim());
 });

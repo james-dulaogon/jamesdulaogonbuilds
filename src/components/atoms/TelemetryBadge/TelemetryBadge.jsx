@@ -1,4 +1,3 @@
-import React from 'react';
 import './TelemetryBadge.css';
 
 export const TelemetryBadge = ({ label, value }) => {

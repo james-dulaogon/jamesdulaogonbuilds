@@ -1,4 +1,3 @@
-import React from 'react';
 import { ProjectCardLink } from '@/components/molecules/ProjectCardLink/ProjectCardLink';
 import './ProjectCard.css';
 
